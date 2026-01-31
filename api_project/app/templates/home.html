@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Details Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-container {
+            background: #fff;
+            padding: 30px;
+            width: 350px;
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #667eea;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background: #667eea;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #5a67d8;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Employee Details</h2>
+
+        <form>
+            <div class="form-group">
+                <label>Employee Name</label>
+                <input type="text" placeholder="Enter name" required id="name">
+            </div>
+
+            <div class="form-group">
+                <label>Age</label>
+                <input type="text" placeholder="Enter age" required id="age">
+            </div>
+
+            <div class="form-group">
+                <label>Department</label>
+                <input type="text" placeholder="Enter Dept" required id="dept">
+            </div>
+
+            <div class="form-group">
+                <label>City</label>
+                <input type="text" placeholder="Enter city" required id="city">
+            </div>
+
+            <p id="btn" class="submit-btn" style="text-align: center;">Submit</p>
+        </form>
+    </div>
+
+    <script src="{% static 'emp.js' %}"></script>
+
+</body>
+</html>
